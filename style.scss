@@ -1,0 +1,415 @@
+body {
+    background-color: #141414;
+    overflow-x: hidden; 
+}
+
+// Navbar e subheader------------------
+.sticky-container {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+@media (max-width: 900px) {
+    .sticky-container {
+        position: static; 
+    }
+}
+
+.navbar-custom {
+    background-color: #141414;
+}
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .dropdown-toggle {
+    color: white;
+}
+.navbar-custom .dropdown-menu {
+    background-color: #141414;
+}
+.navbar-custom .dropdown-item {
+    color: white;
+}
+.navbar-custom .dropdown-item:hover {
+    background-color: #333;
+}
+
+.navbar-custom .nav-link {
+    margin-right: 15px;
+}
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.user-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 576px) {
+    .dropdown-menu {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vw;
+        max-width: 280px; 
+    }
+}
+
+
+.dropdown-profile .profile-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.dropdown-profile .profile-item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.dropdown-profile .profile-item:hover {
+    background-color: #333;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 8px 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.menu-item i {
+    margin-right: 10px;
+}
+
+.menu-item:hover {
+    background-color: #333;
+    color: white;
+}
+
+.logout {
+    color: #ff4b4b;
+}
+
+.subheader {
+    background-color: #141414;
+    color: white;
+    height: 60px;
+}
+
+
+.subheader h3 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
+.subheader .btn-custom {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    font-size: 0.9rem;
+    padding: 0 10px;
+
+}
+.btn-custom-small{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    font-size: 0.9rem;
+    padding: 0 10px;
+}
+
+.subheader .dropdown-menu {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    z-index: 1050;
+    display: none;
+    width: 440px;
+}
+
+
+.subheader .dropdown-menu.show {
+    display: block;
+}
+
+
+.subheader .dropdown-item {
+    color: white;
+    background-color: black;
+}
+.subheader .dropdown-item:hover {
+    background-color: #333;
+    color: white;
+}
+
+
+@media (max-width: 576px) {
+ 
+    .subheader .dropdown-menu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        max-width: 400px;
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1050;
+    }
+
+ 
+    .subheader .dropdown-menu .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+   
+    .subheader .dropdown-menu .col-4 {
+        flex: 0 0 50%; 
+        max-width: 50%;
+        text-align: left;
+    }
+}
+@media (max-width: 576px) {
+    .btn-custom-small {
+        display: none;
+    }
+}
+
+// main and carousel------------------------------
+
+.main-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    gap: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 92vw;
+    margin-left: -100px;
+
+    cursor: pointer;
+}
+
+
+@media (max-width: 576px) {
+    .card-container {
+        margin-left: 0px; 
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .card-container {
+        margin-left: -40px; 
+    }
+}
+
+
+.card-container .card {
+    min-width: 15rem;
+    height: 10rem;
+    border-radius: 0;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    border: 0;
+}
+.card:hover {
+    transform: scale(1.3); 
+    overflow: visible;
+    z-index: 1000;
+}
+.card-container.disable-hover .card:hover {
+    transform: none; 
+}
+.card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.card-container-wrapper {
+    position: relative;
+}
+
+.scroll-button-left,
+.scroll-button-right {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 50px; 
+    height: 79%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1; 
+    display: none; 
+    padding-top: 2.5rem; 
+    padding-bottom: 2.5rem; 
+}
+.scroll-button-left {
+    margin-left: -100px;
+}
+
+@media (max-width: 576px) {
+    .scroll-button-left {
+        margin-left: 0;
+    }
+}
+
+
+.scroll-button-left:hover,
+.scroll-button-right:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 9999;
+}
+
+.card-container-wrapper:hover .scroll-button-left,
+.card-container-wrapper:hover .scroll-button-right {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-button-left {
+    left: 0;
+}
+
+.scroll-button-right {
+    right: 0;
+}
+
+.scroll-button-left .btn,
+.scroll-button-right .btn {
+    font-size: 1.5rem; 
+    background: none;
+    border: none;
+    color: white;
+}
+@media (max-width: 576px) {
+    .scroll-button-left,
+    .scroll-button-right {
+        position: absolute; 
+       
+        height: 78%; 
+        width: 50px; 
+        background-color: rgba(0, 0, 0, 0.5); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10; 
+    }}
+
+// Footer-----------------------------------
+.footer {
+    background-color: #141414;
+    color: #b3b3b3;
+    padding: 40px 0;
+    font-size: 0.875rem;
+}
+.footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons a {
+    margin-right: 15px;
+    font-size: 1.25rem;
+    color: #b3b3b3;
+}
+.footer .service-code {
+    border: 1px solid #b3b3b3;
+    padding: 5px 10px;
+    color: #b3b3b3;
+    display: inline-block;
+    margin-top: 15px;
+}
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 576px) {
+    .footer .social-icons {
+        display: flex;
+        justify-content: center; 
+        margin-bottom: 15px; 
+    }
+
+    .footer .copyright {
+        justify-self: center;     
+        text-align: center; 
+        margin-top: 10px;
+    }
+}
+
+
+
+
